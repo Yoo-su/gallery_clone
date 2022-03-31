@@ -125,6 +125,7 @@ export const Content = styled.div`
 
     & img{
         width:81%;
+        max-height:698px;
         object-fit:cover;
 
         @media all and (min-width:0px) and (max-width:1260px){
