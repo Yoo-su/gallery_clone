@@ -1,5 +1,5 @@
 import { atom, useRecoilState, useRecoilValue } from "recoil";
-import testJson from '../../test.json';
+import testJson from '../../assets/test.json';
 
 //렌더샷 이미지 전역 상태
 export const views = atom({
