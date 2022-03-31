@@ -24,7 +24,7 @@ export default function DetailPage() {
     const [modalOn, setModalOn] = useState(false);
     const curDate = getDate();
     const navigate = useNavigate();
-
+    console.log(curIdx,'gg')
     return (
         <Wrapper>
 
@@ -86,7 +86,7 @@ export default function DetailPage() {
                 <img src={curImageUrl} />
 
                 {/* 다음 이미지 이동 버튼 */}
-                {curIdx !== curViews.length && (<IoArrowForward className="forwardIcon" onClick={() => {
+                {curIdx !== curViews.length-1 && (<IoArrowForward className="forwardIcon" onClick={() => {
                     setCurImageUrl(curViews[curIdx + 1]._id);
                     setCurIdx(curIdx + 1)
                 }} />)}
