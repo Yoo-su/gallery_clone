@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Wrapper=styled.div`
+export const Wrapper = styled.div`
     display:flex;
     flex-direction:column;
     align-items:center;
 `;
 
-export const Header=styled.div`
+export const Header = styled.div`
     display:flex;
     align-items:center;
     width:100%;
@@ -92,7 +92,7 @@ export const Header=styled.div`
     
 `;
 
-export const Content=styled.div`
+export const Content = styled.div`
     display:flex;
     position:relative;
     justify-content:center;

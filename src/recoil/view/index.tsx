@@ -9,7 +9,7 @@ export const views = atom({
 
 
 //체크된 렌더샷 전역 상태
-export const checkedViews=atom<string[]>({
-  key:"checked",
-  default:[]
+export const checkedViews = atom<string[]>({
+  key: "checked",
+  default: []
 })

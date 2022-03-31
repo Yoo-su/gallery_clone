@@ -1,19 +1,19 @@
-import styled ,{keyframes,css} from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
 
-interface wrapperProps{
-    imageUrl:string
+interface wrapperProps {
+    imageUrl: string
 }
 
-interface contentProps{
-    hovered:boolean,
-    checked:boolean
+interface contentProps {
+    hovered: boolean,
+    checked: boolean
 }
 
-interface ulProps{
-    open:boolean
+interface ulProps {
+    open: boolean
 }
 
-const fadein=keyframes`
+const fadein = keyframes`
     from{
         opacity:0;
     }
@@ -22,11 +22,11 @@ const fadein=keyframes`
     }
 `;
 
-const animationCss=css`
+const animationCss = css`
     animation:${fadein} 1s;
 `;
 
-export const Wrapper=styled.div<wrapperProps>`
+export const Wrapper = styled.div<wrapperProps>`
     display:flex;
     width:21.5rem;
     height:15rem;
@@ -53,7 +53,7 @@ export const Wrapper=styled.div<wrapperProps>`
     }
 `;
 
-export const Content=styled.div<contentProps>`
+export const Content = styled.div<contentProps>`
     position:relative;
     width:100%;
 
@@ -67,12 +67,12 @@ export const Content=styled.div<contentProps>`
         border-radius:0.1rem;
         color:white;
         z-index:1;
-        background:${props=>props.checked===true?'#499DB3':'white'};
-        visibility:${props=>(props.hovered===true || props.checked===true)?'visible':'hidden'};
+        background:${props => props.checked === true ? '#499DB3' : 'white'};
+        visibility:${props => (props.hovered === true || props.checked === true) ? 'visible' : 'hidden'};
 
         & .checkIcon{
             pointer-events: none;
-            visibility:${props=>props.checked===true?'visible':'hidden'};
+            visibility:${props => props.checked === true ? 'visible' : 'hidden'};
         }
     }
 
@@ -81,7 +81,7 @@ export const Content=styled.div<contentProps>`
         top:20px;
         right:15px;
         z-index:1;
-        visibility:${props=>props.hovered===true?'visible':'hidden'};
+        visibility:${props => props.hovered === true ? 'visible' : 'hidden'};
     }
 
     & label{
@@ -102,7 +102,7 @@ export const Content=styled.div<contentProps>`
     }
 `;
 
-export const Ul=styled.ul<ulProps>`
+export const Ul = styled.ul<ulProps>`
     position:absolute;
     top:30px;
     right:15px;
@@ -114,11 +114,11 @@ export const Ul=styled.ul<ulProps>`
     text-align:center;
     letter-spacing:1px;
     padding:0.1rem 0;
-    visibility:${props=>props.open===true?'visible':'hidden'};
-    ${props=>props.open===true && animationCss};
+    visibility:${props => props.open === true ? 'visible' : 'hidden'};
+    ${props => props.open === true && animationCss};
 `;
 
-export const Li=styled.li`
+export const Li = styled.li`
     list-style:none;
     padding:0.2rem 0.8rem;
     font-size:14px;

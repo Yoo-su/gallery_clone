@@ -1,10 +1,10 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-interface checkboxProps{
-    checked:boolean
+interface checkboxProps {
+    checked: boolean
 }
 
-const fadein=keyframes`
+const fadein = keyframes`
     from {
         opacity:0;
     }
@@ -13,14 +13,14 @@ const fadein=keyframes`
     }
 `;
 
-export const Wrapper=styled.div`
+export const Wrapper = styled.div`
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
 `;
 
-export const Header=styled.div`
+export const Header = styled.div`
     display:flex;
     width:100%;
     align-items:center;
@@ -112,17 +112,17 @@ export const CheckBox = styled.div<checkboxProps>`
     border:1px solid #BEBEBE;
     border-radius:0.1rem;
     cursor:pointer;
-    background:${props=>props.checked===true?'#499DB3':'white'};
+    background:${props => props.checked === true ? '#499DB3' : 'white'};
 
     & .checkIcon{
         pointer-events: none;
         color:white;
-        visibility:${props=>props.checked===true?'visible':'hidden'};
+        visibility:${props => props.checked === true ? 'visible' : 'hidden'};
     }
 
 `;
 
-export const ItemContainer=styled.div`
+export const ItemContainer = styled.div`
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
