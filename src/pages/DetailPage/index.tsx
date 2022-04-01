@@ -1,10 +1,10 @@
 import { Wrapper, Header, Content } from "./styles";
 import { useLocation, useNavigate } from 'react-router-dom';
 import { IoCloseSharp, IoDownloadOutline, IoTrashOutline, IoArrowForward, IoArrowBack } from 'react-icons/io5';
-import { views } from '../../recoil/view';
-import { useRecoilValue } from 'recoil';
+import { views, checkedViews } from '../../recoil/view';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { getDate } from "../../util/getDate";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { saveAs } from 'file-saver'
 import WarningModal from '../../components/WarningModal';
 
@@ -21,9 +21,15 @@ export default function DetailPage() {
     const [curImageUrl, setCurImageUrl] = useState(location.state.url);
     const [curIdx, setCurIdx] = useState(location.state.idx);
     const curViews = useRecoilValue(views);
+    const setCurCheckedViews=useSetRecoilState(checkedViews);
     const [modalOn, setModalOn] = useState(false);
     const curDate = getDate();
     const navigate = useNavigate();
+
+    useEffect(()=>{
+        console.log('디테일');
+        setCurCheckedViews([]);
+    },[])
 
     return (
         <Wrapper>

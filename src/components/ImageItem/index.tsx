@@ -30,7 +30,18 @@ function ImageItem({ url, idx }: propsType) {
                 idx: idx
             }}
         >
-            <Wrapper imageUrl={url}>
+            <Wrapper imageUrl={url} onClick={(e)=>{
+                {/* 렌더샷 선택중인 경우 클릭 시 디테일 페이지로 이동하지 않고 체크 on, off 되도록 한다 */}
+                if (curCheckedViews.length>0){
+                    e.preventDefault();
+                    if (checked === true) {
+                        setCurCheckedViews(curCheckedViews.filter(viewUrl => viewUrl !== url));
+                    }
+                    else {
+                        setCurCheckedViews([...curCheckedViews, url]);
+                    }
+                }
+            }}>
 
                 {/* 렌더샷 이미지 삭제 경고 모달 */}
                 <WarningModal open={modalOn} setOpen={setModalOn} items={url} />
