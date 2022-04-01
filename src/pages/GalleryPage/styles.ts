@@ -63,6 +63,10 @@ export const Header = styled.div`
         justify-content:center;
         align-items:center;
         text-align:center;
+
+        @media all and (min-width:0px) and (max-width:680px){
+            font-size:12px;
+        }
     }
 
     & .headerRight{

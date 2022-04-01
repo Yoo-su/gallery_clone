@@ -67,6 +67,10 @@ export const Header = styled.div`
             margin-right:0.5rem;
             height:1.8rem;
 
+            @media all and (min-width:0px) and (max-width:680px){
+                font-size:12px;
+            }
+
             & .downloadIcon{
                 margin-right:0.5rem;
                 width:1.2rem;
