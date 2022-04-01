@@ -103,6 +103,13 @@ export const Header = styled.div`
             }
         }
     }
+
+    & .headerLeft, & .headerRight{
+        
+        @media all and (min-width:0px) and (max-width:680px){
+            font-size:12px;
+        }
+    }
 `;
 
 export const CheckBox = styled.div<checkboxProps>`
