@@ -43,7 +43,9 @@ function ImageItem({ url, idx }: propsType) {
                         setDropdownOn(false);
                     }}
                     hovered={hovered}
-                    checked={checked}>
+                    checked={checked}
+                    multipleChecked={curCheckedViews.length>0}
+                    >
 
                     {/* 체크박스 */}
                     <div className="checkBox" onClick={(e) => {
@@ -59,7 +61,7 @@ function ImageItem({ url, idx }: propsType) {
                     </div>
 
                     {/* 드롭다운 메뉴 onOff 버튼 */}
-                    <BsThreeDots className="threeDots" onClick={(e) => {
+                    <BsThreeDots className="threeDots"  onClick={(e) => {
                         e.preventDefault();
                         if (dropdownOn === true) {
                             setDropdownOn(false);

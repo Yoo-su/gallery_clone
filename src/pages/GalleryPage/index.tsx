@@ -17,7 +17,7 @@ export default function GalleryPage() {
     return (
         <Wrapper>
             {/* 렌더샷 이미지 삭제 경고 모달 */}
-            <WarningModal open={modalOn} setOpen={setModalOn} items={curCheckedViews} />
+            <WarningModal open={modalOn} setOpen={setModalOn} items={curCheckedViews.length>1?curCheckedViews:curCheckedViews[0] } />
 
             {/* 헤더 */}
             <Header>

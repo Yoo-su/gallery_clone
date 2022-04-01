@@ -64,6 +64,7 @@ export default function WarningModal({ open, setOpen, items }: props) {
                     if (typeof (items) === "string") {
                         //단일 이미지 삭제인 경우 삭제 후 갤러리 페이지로 이동
                         setCurViews(curViews.filter(view => view._id !== items));
+                        setCurCheckedViews([]);
                         navigate('/');
                     }
                     else {

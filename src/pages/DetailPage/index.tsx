@@ -24,7 +24,7 @@ export default function DetailPage() {
     const [modalOn, setModalOn] = useState(false);
     const curDate = getDate();
     const navigate = useNavigate();
-    console.log(curIdx,'gg')
+
     return (
         <Wrapper>
 

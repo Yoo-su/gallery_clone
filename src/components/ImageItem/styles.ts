@@ -6,7 +6,8 @@ interface wrapperProps {
 
 interface contentProps {
     hovered: boolean,
-    checked: boolean
+    checked: boolean,
+    multipleChecked:boolean
 }
 
 interface ulProps {
@@ -81,7 +82,7 @@ export const Content = styled.div<contentProps>`
         top:20px;
         right:15px;
         z-index:1;
-        visibility:${props => props.hovered === true ? 'visible' : 'hidden'};
+        visibility:${props => (props.hovered === true && props.multipleChecked===false) ? 'visible' : 'hidden'};
     }
 
     & label{
